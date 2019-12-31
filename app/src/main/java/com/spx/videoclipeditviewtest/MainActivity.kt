@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, CameraEffectActivity::class.java)
                 startActivity(intent)
             } else {
-                Toast.makeText(this@MainActivity, "目前摄像头预览滤镜效果只支持L以上版本", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "Currently the camera preview filter effect only supports L and above versions", Toast.LENGTH_LONG).show()
             }
 
         }

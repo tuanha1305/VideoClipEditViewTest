@@ -212,7 +212,7 @@ class Camera2BasicFragment : Fragment(), ActivityCompat.OnRequestPermissionsResu
 
     private fun showFilterDialog() {
         var dialogFragment = BottomDialogFragment.getInstance(0, getSelection(),
-                "选择滤镜", createFilterOptions())
+                "Select filter", createFilterOptions())
         dialogFragment.setSelectionCallBack { selection, option ->
             val filter = getFilterByName(option.optionName, requireContext())
             Log.d(VideoEditActivity.TAG, "selection:$selection, filter:$filter")

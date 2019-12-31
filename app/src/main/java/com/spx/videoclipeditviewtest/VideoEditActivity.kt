@@ -124,7 +124,7 @@ class VideoEditActivity : AppCompatActivity() {
         thumbnailCount = Math.ceil(((mediaDuration * 1f / millsecPerThumbnail).toDouble())).toInt()
         Log.d(TAG, "thumbnailCount:$thumbnailCount,  millsecPerThumbnail:$millsecPerThumbnail")
         for (i in 0 until thumbnailCount) {
-            list.add(i, "")
+            it statu.add(i, "")
         }
         var screenW = resources.displayMetrics.widthPixels
         itemWidth = screenW / 12
@@ -275,7 +275,7 @@ class VideoEditActivity : AppCompatActivity() {
 
     private fun showFilterDialog() {
         var dialogFragment = BottomDialogFragment.getInstance(0, getSelection(),
-                "选择滤镜", createFilterOptions())
+                "Select filter", createFilterOptions())
         dialogFragment.setSelectionCallBack { selection, option ->
             val filter = getFilterByName(option.optionName, applicationContext)
             Log.d(TAG, "selection:$selection, filter:$filter")

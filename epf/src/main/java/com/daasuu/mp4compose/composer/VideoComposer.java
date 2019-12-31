@@ -18,6 +18,7 @@ import com.spx.egl.EncoderSurface;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
+import static android.media.MediaExtractor.SEEK_TO_CLOSEST_SYNC;
 import static android.media.MediaExtractor.SEEK_TO_PREVIOUS_SYNC;
 
 // Refer: https://android.googlesource.com/platform/cts/+/lollipop-release/tests/tests/media/src/android/media/cts/ExtractDecodeEditEncodeMuxTest.java
@@ -290,6 +291,7 @@ class VideoComposer {
     public void setClipRange(long startTimeMs, long endTimeMs) {
         this.startTimeMs = startTimeMs;
         this.endTimeMs = endTimeMs;
-        mediaExtractor.seekTo(startTimeMs, SEEK_TO_PREVIOUS_SYNC);
+        mediaExtractor.seekTo(startTimeMs, SEEK_TO_CLOSEST_SYNC);
+        mediaExtractor.advance();
     }
 }

@@ -28,7 +28,7 @@
         android:layout_marginRight="13dp"
         android:background="@drawable/ic_bg_video_next"
         android:gravity="center"
-        android:text="下一步"
+        android:text="Next step"
         android:textColor="#ffffff"
         android:textSize="15dp" />
 
@@ -48,7 +48,7 @@
             android:drawableTop="@drawable/ic_record_filter"
             android:drawablePadding="4dp"
             android:gravity="center_horizontal"
-            android:text="滤镜"
+            android:text="Filter"
             android:textColor="#ffffff"
             android:textSize="13sp" />
 

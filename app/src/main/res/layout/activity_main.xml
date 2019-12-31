@@ -16,7 +16,7 @@
         android:background="#33ff0000"
         android:gravity="center"
         android:padding="8dp"
-        android:text="视频裁剪"
+        android:text="Video Cropping"
         android:textSize="16sp"/>
 
     <TextView
@@ -29,7 +29,7 @@
         android:background="#33ff0000"
         android:gravity="center"
         android:padding="8dp"
-        android:text="视频编辑(特效,滤镜)"
+        android:text="Video editing (special effects, filters)"
         android:textSize="16sp"/>
 
     <TextView
@@ -42,7 +42,7 @@
         android:background="#33ff0000"
         android:gravity="center"
         android:padding="8dp"
-        android:text="摄像头预览"
+        android:text="Camera preview"
         android:textSize="16sp"/>
 
 </RelativeLayout>

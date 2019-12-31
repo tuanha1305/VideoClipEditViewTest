@@ -122,7 +122,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
                     && endMillSec >= startMillSec + minSelection) {
                 doClip()
             } else {
-                showToast("裁剪选择时间段不正确哟")
+                showToast("The crop selection time period is incorrect")
             }
         }
     }
@@ -190,7 +190,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
 
         var file = File(finalVideoPath)
         if (!file.exists()) {
-            Toast.makeText(this, "请更新videoPlayUrl变量为本地手机的视频文件地址", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Please update the videoPlayUrl variable to the video file address of the local phone", Toast.LENGTH_LONG).show()
         }
 
 
@@ -241,7 +241,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
     override fun onPreviewChang(startMillSec: Long, finished: Boolean) {
 //        Log.d(TAG, "onPreviewChang   startMillSec:$startMillSec")
         var selSec = startMillSec / 1000f
-        toast_msg_tv.text = "预览到${secFormat.format(selSec)}s"
+        toast_msg_tv.text = "Preview to${secFormat.format(selSec)}s"
         toast_msg_tv.visibility = View.VISIBLE
         if (!finished) {
             pausePlayer()
@@ -274,7 +274,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
         adjustSelection()
 
         var selSec = time / 1000f
-        toast_msg_tv.text = "已截取${secFormat.format(selSec)}s, [$startMillSec - $endMillSec]"
+        toast_msg_tv.text = "Intercepted${secFormat.format(selSec)}s, [$startMillSec - $endMillSec]"
         toast_msg_tv.visibility = View.VISIBLE
 
         handler.removeMessages(MSG_UPDATE)
@@ -404,7 +404,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
         Mp4Composer(videoPathInput, videoPlayUrl)
                 .frameRate(8)
 //                .filter(GLImageComplexionBeautyFilter(this))
-                .filterList(glFilterList)
+//                .filterList(glFilterList)
                 .size(540, 960)
                 .clip(startMillSec, endMillSec)
                 .listener(object : Mp4Composer.Listener {
@@ -417,7 +417,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
                         Log.d(TAG, "onCompleted()")
                         runOnUiThread {
                             hideShadow()
-                            showToast("裁剪成功!新文件已经存放在:" + videoPlayUrl)
+                            showToast("Cropped successfully! The new file is already stored in:" + videoPlayUrl)
                             finish()
                         }
 
@@ -432,7 +432,7 @@ class VideoClipActivity : AppCompatActivity(), ClipContainer.Callback {
                         Log.d(TAG, "clip onFailed", exception)
                         runOnUiThread {
                             hideShadow()
-                            showToast("裁剪失败")
+                            showToast("Crop failed")
                         }
                     }
                 })

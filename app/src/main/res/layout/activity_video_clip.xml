@@ -139,7 +139,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            android:text="慢"
+            android:text="slow"
             android:textColor="#ffffff" />
 
         <TextView
@@ -151,7 +151,7 @@
             android:layout_marginRight="8dp"
             android:background="@drawable/app_frame_preview_mode_bg"
             android:padding="4dp"
-            android:text="开启帧预览模式"
+            android:text="Turn on frame preview mode"
             android:textColor="#ffffff"
             android:textSize="12sp" />
 
@@ -162,7 +162,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="16dp"
             android:layout_toLeftOf="@+id/tv_framepreviewmode"
-            android:text="快"
+            android:text="fast"
             android:textColor="#ffffff" />
 
 
@@ -187,7 +187,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/app_frame_preview_mode_bg"
-        android:text="裁剪"
+        android:text="Crop"
         android:gravity="center"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"

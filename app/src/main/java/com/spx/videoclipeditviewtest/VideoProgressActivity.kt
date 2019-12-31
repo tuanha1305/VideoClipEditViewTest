@@ -57,7 +57,8 @@ class VideoProgressActivity : AppCompatActivity() {
                         Log.d(TAG, "onCompleted()")
                         runOnUiThread {
                             var e = System.currentTimeMillis()
-                          Toast.makeText(this@VideoProgressActivity, "生成视频成功,耗时${e-s}ms, 文件放在:${videoProcessConfig.outMediaPath}", Toast.LENGTH_LONG).show()
+                          Toast.makeText(this@VideoProgressActivity, "Generate video successfully and time consuming${e-s}ms, \n" +
+                                  "File in:${videoProcessConfig.outMediaPath}", Toast.LENGTH_LONG).show()
                         }
                         progression = 100
                         finish()
@@ -65,7 +66,7 @@ class VideoProgressActivity : AppCompatActivity() {
 
                     override fun onCanceled() {
                         runOnUiThread {
-                            Toast.makeText(this@VideoProgressActivity, "生成视频取消", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VideoProgressActivity, "Generate Video Cancel", Toast.LENGTH_LONG).show()
                         }
 
                     }
@@ -73,7 +74,7 @@ class VideoProgressActivity : AppCompatActivity() {
                     override fun onFailed(exception: Exception) {
                         Log.d(TAG, "onFailed()")
                         runOnUiThread {
-                            Toast.makeText(this@VideoProgressActivity, "生成视频失败", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@VideoProgressActivity, "Generate video failed", Toast.LENGTH_LONG).show()
                         }
 
                     }
